@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <title>Globe</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="img/favicon.png" />
+
+    <link rel="stylesheet" type="text/css" href="style1.css" />
+
+    <script
+      async
+      src="https://unpkg.com/es-module-shims@1.6.3/dist/es-module-shims.js"
+    ></script>
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://unpkg.com/three@0.151.0/build/three.module.js",
+          "three/addons/": "https://unpkg.com/three@0.151.0/examples/jsm/"
+        }
+      }
+    </script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"
+      integrity="sha512-cOH8ndwGgPo+K7pTvMrqYbmI8u8k6Sho3js0gOqVWTmQMlLIi6TbqGWRTpf1ga8ci9H3iPsvDLr4X7xwhC/+DQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+  </head>
+
+  <body>
+    <section
+      class="Section HomepageGlobalSection theme--Dark flavor--Chroma accent--Cyan Section--angleTop Section--paddingNormal Section--hasGuides"
+    >
+      <div class="Section__masked">
+        <div class="Section__backgroundMask">
+          <div class="Section__background">
+            <figure class="BackgroundGlobe" data-js-controller="BackgroundGlobe">
+              <div class="Globe js-globe Globe--isAngled">
+                <!-- <div class="container"> -->
+                <canvas class="canvas"></canvas>
+              </div>
+              <!-- </div> -->
+            </figure>
+            <div class="Guides" aria-hidden="true">
+              <div class="Guides__container">
+                <div class="Guides__guide"></div>
+                <div class="Guides__guide"></div>
+                <div class="Guides__guide"></div>
+                <div class="Guides__guide"></div>
+                <div class="Guides__guide"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="Section__container">
+          <div class="Section__layoutContainer">
+            <div class="Section__layout">
+              <div class="RowLayout" style="--rowLayoutGap: 32px">
+                <div class="ColumnLayout" data-columns="2,2">
+                  <section
+                    class="Copy HomepageGlobalSection__copy variant--Section"
+                    style=""
+                  >
+                    <header class="Copy__header">
+                      <h2 class="Copy__caption">Global scale</h2>
+                      <h1 class="Copy__title">
+                        The backbone for global commerce
+                      </h1>
+                    </header>
+
+                    <div class="Copy__body">
+                      Stripe makes moving money as easy and programmable as
+                      moving data. Our teams are based in offices around the
+                      world and we process hundreds of billions of dollars each
+                      year for ambitious businesses of all sizes.
+                    </div>
+                  </section>
+                </div>
+                <div class="ColumnLayout1" data-columns="1,1,1,1">
+                  <section class="column-section">
+                    <header class="column-header">
+                      <h1 class="column-title">250M+</h1>
+                    </header>
+                    <div class="column-body">
+                      API requests per day, peaking at 13,000 requests a second.
+                    </div>
+                  </section>
+                  <section class="column-section">
+                    <header class="column-header">
+                      <h1 class="column-title">99.999%</h1>
+                    </header>
+                    <div class="column-body">
+                      historical uptime for
+                      <a class="Link" href="https://status.stripe.com/"
+                        >Stripe services</a
+                      >.
+                    </div>
+                  </section>
+                  <section class="column-section">
+                    <header class="column-header">
+                      <h1 class="column-title">290%</h1>
+                    </header>
+                    <div class="column-body">
+                      of U.S. adults have bought from businesses using Stripe.
+                    </div>
+                  </section>
+                  <section class="column-section">
+                    <header class="column-header">
+                      <h1 class="column-title">135+</h1>
+                    </header>
+                    <div class="column-body">
+                      currencies and payment methods supported.
+                    </div>
+                  </section>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="index.js" type="module"></script>
+  </body>
+</html>

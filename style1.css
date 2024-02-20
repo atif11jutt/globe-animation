@@ -1,0 +1,195 @@
+html,
+body {
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  margin: 0px;
+  padding: 0px;
+  background: #0f2027;
+  background: -webkit-linear-gradient(to top, #0f2027, #203a43, #2c5364);
+  background: linear-gradient(to top, #0f2027, #203a43, #2c5364);
+  color: rgb(49, 98, 127);
+}
+
+.canvas {
+  position: relative;
+  width: 2000px;
+  height: 1500px;
+  left: 70%;
+  top: -31%;
+}
+
+.Section__backgroundMask {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+.Section__background {
+  position: relative;
+  height: 130%;
+  max-height: none;
+  width: 100%;
+  top: 0;
+  left: 0;
+  transform-origin: 100% 0;
+  transform: skewY(-6deg);
+  background: #0a2540;
+  overflow: hidden;
+}
+.BackgroundGlobe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.Globe {
+  /* position: absolute; */
+  /* left: 0; */
+  /* top: 0; */
+  width: 100%;
+  height: 100%;
+  /* display: flex; */
+  /* justify-content: flex-end; */
+  /* position: relative; */
+  /* width: 500px; */
+  /* height: 500px; */
+  display: flex;
+  justify-content: flex-end;
+  /* left: 72%;
+  top: -30%; */
+}
+
+.Globe--isAngled {
+  transform: skewY(6deg);
+  transform-origin: 100% 0;
+}
+
+body {
+  margin: 0;
+}
+.Copy.variant--Section {
+  --paddingRight: 64px;
+  --rowGap: 24px;
+  --titleFontSize: 34px;
+  --titleLineHeight: 1.294117647;
+  --titleLetterSpacing: -0.1px;
+}
+.Copy,
+.Copy__header {
+  display: grid;
+  row-gap: 24px;
+}
+.Copy__header {
+  position: relative;
+  padding: 0 120px 0 70px;
+  max-width: 305px;
+  min-width: 305px;
+}
+.grid__header {
+  position: relative;
+  padding: 0 60px 0 16px;
+  max-width: 305px;
+  min-width: 305px;
+}
+.grid__body {
+  padding: 0 60px 0 16px;
+}
+.RowLayout {
+  gap: 4rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.Copy__caption {
+  font-size: 18px;
+  margin: 0;
+  color: #00d4ff;
+}
+.Copy__title {
+  position: relative;
+  font-size: 40px;
+  color: #fff;
+  font-weight: 600;
+  margin: 0;
+  letter-spacing: -0.1;
+}
+
+.column-title {
+  color: #fff;
+  position: relative;
+  font-weight: 600;
+  font-size: 24px;
+  margin: 8px 6px;
+}
+.column-title:before {
+  --titleFontSize: 24px;
+  --titleLineHeight: 1.333333333;
+  --headerPaddingLeft: 16px;
+  display: block;
+  --titleBorderColor: #00d4ff;
+  position: absolute;
+  top: calc(
+    0.5px + var(--titleLineHeight) * var(--titleFontSize) / 2 -
+      var(--titleFontSize) / 2
+  );
+  left: calc(var(--headerPaddingLeft) * -1);
+  width: 1px;
+  height: 24px;
+  background-color: var(--titleBorderColor, transparent);
+  content: "";
+}
+.Link {
+  font-weight: 425;
+  cursor: pointer;
+  color: #00d4ff;
+  outline: none;
+}
+.column-body {
+  font-size: 18px;
+  font-weight: 500;
+  color: #adbdcc;
+  margin: 6px;
+}
+.column-section {
+  z-index: 1;
+  padding: 8px;
+}
+.Copy__body {
+  padding: 0 120px 0 70px;
+  font-size: 22px;
+  font-weight: 500;
+  color: #adbdcc;
+  width: 374px;
+  z-index: 1;
+  /* max-width: calc(1080px * 0.25); */
+}
+.Section__layoutContainer {
+  display: flex;
+  /* align-items: end; */
+  height: 100vh;
+}
+.Section__container {
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  padding-top: 11rem;
+}
+.ColumnLayout {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 0 150px 0 70px;
+}
+.ColumnLayout1 {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 0 150px 0 140px;
+}
