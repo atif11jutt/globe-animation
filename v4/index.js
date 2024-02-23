@@ -303,9 +303,9 @@ const initThreeJS = () => {
     mouseDown = false;
     if (!minMouseDownFlag) return;
 
-    // materials.forEach((el) => {
-    //   gsap.to(el.uniforms.u_maxExtrusion, { value: 1.0, duration: 0.15 });
-    // });
+    materials.forEach((el) => {
+      gsap.to(el.uniforms.u_maxExtrusion, { value: 1.0, duration: 0.15 });
+    });
 
     grabbing = false;
     if (isIntersecting) document.body.style.cursor = "pointer";
@@ -430,7 +430,7 @@ const initThreeJS = () => {
         (obj) => obj.name === `arc_${index}`
       );
       if (lineObject) {
-        animateArc(lineObject, start, end);
+        // animateArc(lineObject, start, end);
       } else {
         const geometry = new THREE.BufferGeometry();
         geometry.setAttribute(
@@ -457,52 +457,6 @@ const initThreeJS = () => {
 
     requestAnimationFrame(render.bind(this));
   };
-  const animateArc = (lineObject, start, end) => {
-    const duration = 2000; // Animation duration in milliseconds
-
-    let animationStartTime = null;
-
-    const animate = (time) => {
-      if (!animationStartTime) {
-        animationStartTime = time;
-      }
-
-      const elapsed = time - animationStartTime;
-      const progress = Math.min(elapsed / duration, 1); // Cap progress at 1 to prevent overshooting
-
-      // Interpolate the position of the arc line points
-      const interpolatedPoint = new THREE.Vector3(
-        THREE.MathUtils.lerp(start.x, end.x, progress),
-        THREE.MathUtils.lerp(start.y, end.y, progress),
-        THREE.MathUtils.lerp(start.z, end.z, progress)
-      );
-
-      // Update the arc line geometry with the interpolated point
-      const positions = new Float32Array([
-        start.x,
-        start.y,
-        start.z,
-        interpolatedPoint.x,
-        interpolatedPoint.y,
-        interpolatedPoint.z,
-      ]);
-      const geometry = lineObject.geometry;
-      geometry.setAttribute(
-        "position",
-        new THREE.BufferAttribute(positions, 3)
-      );
-      geometry.verticesNeedUpdate = true;
-
-      if (progress < 1) {
-        // Continue the animation if progress is less than 1
-        requestAnimationFrame(animate);
-      }
-    };
-
-    // Start the animation
-    requestAnimationFrame(animate);
-  };
-
   setScene();
   drawArcs();
 };
