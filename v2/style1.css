@@ -206,8 +206,8 @@ body {
   .canvas {
     width: 2000px;
     height: 1800px;
-    left: 150%;
-    top: -48%;
+    left: 100%;
+    top: -115%;
   }
 }
 @media screen and (min-width: 601px) and (max-width: 768px) {
@@ -215,6 +215,9 @@ body {
     width: 1400px;
     height: 1400px;
     left: 90%;
+  }
+  .Section__container {
+    padding-top: 6rem;
   }
   .ColumnLayout {
     padding: 0 110px 0 0px;
@@ -231,7 +234,8 @@ body {
   .canvas {
     width: 1600px;
     height: 1600px;
-    left: 180%;
+    /* left: 180%; */
+    left: 200%;
     top: -400px;
   }
   .ColumnLayout {
@@ -262,5 +266,109 @@ body {
   }
   .column-body {
     font-size: 16px;
+  }
+}
+@media screen and (min-width: 1441px) and (max-width: 2560px) {
+  .canvas {
+    width: 3200px;
+    height: 1200px;
+    left: 50%;
+    top: -16%;
+  }
+  .Section__container {
+    padding-top: 19rem;
+  }
+}
+@media screen and (min-width: 375px) and (max-width: 424px) {
+  .canvas {
+    width: 1600px;
+    height: 1600px;
+    left: 220%;
+    top: -400px;
+  }
+  .ColumnLayout {
+    padding: 0 110px 0 0px;
+  }
+  .ColumnLayout1 {
+    display: grid;
+    gap: 12px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    padding: 0 110px 0 50px;
+    width: 60%;
+  }
+  .RowLayout {
+    gap: 1rem;
+  }
+  .Section__container {
+    padding-top: 7rem;
+  }
+  .Copy__title {
+    font-size: 35px;
+  }
+  .Copy__header {
+    padding: 0 120px 0 30px;
+  }
+  .Copy__body {
+    font-size: 18px;
+    padding: 0 120px 0 30px;
+    width: 340px;
+  }
+  .column-title {
+    font-size: 20px;
+  }
+  .column-body {
+    font-size: 16px;
+  }
+  .ColumnLayout1 {
+    padding: 0 110px 0 20px;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 374px) {
+  .canvas {
+    width: 1600px;
+    height: 1600px;
+    left: 400%;
+    top: -400px;
+  }
+  .Section__container {
+    padding-top: 6rem;
+  }
+  .ColumnLayout {
+    padding: 0 110px 0 0px;
+  }
+  .ColumnLayout1 {
+    display: grid;
+    gap: 12px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    padding: 0 110px 0 50px;
+    width: 60%;
+  }
+  .RowLayout {
+    gap: 1rem;
+  }
+
+  .Copy__title {
+    font-size: 30px;
+  }
+  .Copy__header {
+    padding: 0 120px 0 20px;
+  }
+  .Copy__body {
+    font-size: 16px;
+    padding: 0 120px 0 20px;
+    width: 300px;
+  }
+  .column-title {
+    font-size: 20px;
+  }
+  .column-body {
+    font-size: 16px;
+  }
+  .ColumnLayout1 {
+    padding: 0 110px 0 10px;
+    width: 55%;
   }
 }
