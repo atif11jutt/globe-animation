@@ -303,9 +303,9 @@ const initThreeJS = () => {
     mouseDown = false;
     if (!minMouseDownFlag) return;
 
-    materials.forEach((el) => {
-      gsap.to(el.uniforms.u_maxExtrusion, { value: 1.0, duration: 0.15 });
-    });
+    // materials.forEach((el) => {
+    //   gsap.to(el.uniforms.u_maxExtrusion, { value: 1.0, duration: 0.15 });
+    // });
 
     grabbing = false;
     if (isIntersecting) document.body.style.cursor = "pointer";
